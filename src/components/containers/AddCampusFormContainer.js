@@ -41,9 +41,9 @@ class AddCampusFormContainer extends Component {
   }
 }
 
-const mapDispatch = (dispatch) => {
+const mapDispatch = (dispatch, ownProps) => {
   return {
-    addCampus: (campus) => dispatch(addCampusThunk(campus)),
+    addCampus: (campus) => dispatch(addCampusThunk(campus, ownProps)),
   };
 };
 
