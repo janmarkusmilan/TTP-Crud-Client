@@ -95,6 +95,10 @@ const reducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_ALL_STUDENTS:
       return action.payload;
+    case ENROLL_STUDENT:
+      return state.map((student) =>
+        student.id === action.payload.id ? action.payload : student
+      );
     case ADD_STUDENT:
       return [...state, action.payload];
     case EDIT_STUDENT:
