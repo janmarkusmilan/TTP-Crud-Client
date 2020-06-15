@@ -17,7 +17,7 @@ class AllStudentsContainer extends Component {
   render() {
     return (
       <AllStudentsView
-        allCampuses={this.props.allStudents}
+        allStudents={this.props.allStudents}
         handleDelete={this.handleDelete}
       />
     );
