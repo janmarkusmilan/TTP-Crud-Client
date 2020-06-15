@@ -45,7 +45,7 @@ const EditStudentFormView = (props) => {
             onChange={props.handleChange}
           ></input>
         </div>
-        <button>Edit Student</button>
+        <button>Submit Changes</button>
       </form>
     </div>
   );

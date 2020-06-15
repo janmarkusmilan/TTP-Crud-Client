@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/AllStudentsView.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -17,11 +18,11 @@ const AllStudentsView = (props) => {
           <div key={student.id}>
             <Link to={`/students/${student.id}`}>
               <h1>
-                {student.firstName}
-                {student.lastName}
+                {student.firstName} {student.lastName}
               </h1>
             </Link>
             <img src={student.imageUrl} width="200px" alt={student.firstName} />
+            <br />
             <button onClick={() => props.handleDelete(student.id)}>
               Delete
             </button>
