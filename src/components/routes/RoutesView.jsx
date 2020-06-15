@@ -5,10 +5,10 @@ import {
   CampusContainer,
   AddCampusFormContainer,
   EditCampusFormContainer,
-  // AllStudentsContainer,
-  // StudentContainer,
-  // AddStudentFormContainer
-  // EditStudentFormContainer
+  AllStudentsContainer,
+  StudentContainer,
+  AddStudentFormContainer,
+  EditStudentFormContainer,
 } from "../containers";
 
 const RoutesView = () => {
@@ -22,6 +22,14 @@ const RoutesView = () => {
         exact
         path="/campuses/:id/edit"
         component={EditCampusFormContainer}
+      />
+      <Route exact path="/students" component={AllStudentsContainer} />
+      <Route exact path="/campuses/new" component={AddStudentFormContainer} />
+      <Route exact path="/campuses/:id" component={StudentContainer} />
+      <Route
+        exact
+        path="/students/:id/edit"
+        component={EditStudentFormContainer}
       />
     </Switch>
   );
