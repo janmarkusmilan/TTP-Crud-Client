@@ -1,31 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const EditCampusFormView = (props) => {
+const EditStudentFormView = (props) => {
   return (
     <div>
       <form onSubmit={props.handleSubmit}>
         <div>
-          Name:{" "}
+          First Name:{" "}
           <input
-            value={props.name}
-            name="name"
+            value={props.firstName}
+            name="firstName"
             onChange={props.handleChange}
           ></input>
         </div>
         <div>
-          Address:{" "}
+          Last Name:{" "}
           <input
-            value={props.address}
-            name="address"
+            value={props.lastName}
+            name="lastName"
             onChange={props.handleChange}
           ></input>
         </div>
         <div>
-          Description:{" "}
+          Email:{" "}
           <input
-            value={props.description}
-            name="description"
+            value={props.email}
+            name="email"
             onChange={props.handleChange}
           ></input>
         </div>
@@ -37,19 +37,28 @@ const EditCampusFormView = (props) => {
             onChange={props.handleChange}
           ></input>
         </div>
-        <button>Submit Campus Changes</button>
+        <div>
+          GPA:{" "}
+          <input
+            value={props.gpa}
+            name="gpa"
+            onChange={props.handleChange}
+          ></input>
+        </div>
+        <button>Submit Student Changes</button>
       </form>
     </div>
   );
 };
 
-EditCampusFormView.propTypes = {
+EditStudentFormView.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
+  gpa: PropTypes.string.isRequired,
 };
 
-export default EditCampusFormView;
+export default EditStudentFormView;
